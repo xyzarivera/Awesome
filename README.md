@@ -13,4 +13,8 @@ She had troubled keeping notes in different applications and probably on how she
 - CSS
 - React
 
-> last update: January 24, 2019
+> last update: April 22, 2019
+
+### updates
+- 20190422 - added WebDev_2018 folder and notes
+- 20190124 - created repo
