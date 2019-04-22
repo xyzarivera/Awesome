@@ -1,0 +1,305 @@
+JavaScript
+GChrome > Dev Tools > JS Console
+
+
+Data Types
+1. Number
+- modulo (%)
+
+2. String ("" or '')
+- text
+- concatenation (+)
+- 'This isn\'t very nice' - accepts as a script, no errors
+- 10 + "34" -> "1034" - outputs as String instead
+- 10 - "3" -> 5 - outputs as Number
+- "hello" - "bye" > NaN (Not a Number)
+
+3. Boolean
+- true or false
+- 4 === 4 > true, (3 equal signs)
+- 4 !==4 > false (! then 2 equal signs)
+
+4. Undefined
+- nothing is assigned to a variable
+
+5. Null
+- nothing in object 
+6. Symbol (New in ECMAScript 6)
+-identifier for object properties
+
+var sym1 = Symbol();
+var sym2 = Symbol('foo');
+var sym3 = Symbol('foo');
+
+sym2 ===sym3
+> true
+
+
+7. Object
+
+--------------------
+Logical Operators 
+and &&
+or ||
+not !
+
+---------------------
+Variables
+var VARIABLE NAME = value
+- cant start variable name with a number
+rules
+- starts with a letter only, not number or Symbol
+- can start with $ or _
+
+prompt() - input function
+prompt("String"); - > String
+
+var first = prompt("String"); : outputs String, needs to cnvert String to Number
+Number();
+
+alert() - output function
+
+expression = code that produces a value
+
+let and const
+const paler = 'bobby';
+let experience = 100;
+let wizardLevel = false;
+
+if (experience > 90) {
+    let wizardLevel = true;
+}
+
+
+let creates a new scope that can only be accessed inside a scope or curly bracket (example, a function)
+const - not able to reassigned, cannot be updated anymore
+
+const obj - {
+    player: 'bobby',
+    experience: 100,
+    wizardLeve: false, 
+}
+
+obj cannot be overwritten
+obj.player = 'sally' can be overwritten
+
+-------------------
+Destructuring
+const obj - {
+    player: 'bobby',
+    experience: 100,
+    wizardLeve: false, 
+}
+
+const plyaer = obj.player;
+const experience = obj.experience;
+let wizardLevel = oj.wizardLevel;
+
+OR CODE INTO
+const {player, experience} = obj;
+let {qizardLevel} = obj;
+
+
+
+-----------------
+Control Flow
+conditionals
+1. if
+if (name ===) {
+    code
+}
+
+2. else
+if (name ===) {
+    code;
+} else {
+    code; 
+}
+
+3. else if
+if (name ===) {
+    code;
+} else if () {
+    code; 
+} else
+
+4. Ternary Operator (shorter if else)
+condition ? expr1 : exper 2
+if condition true, output expr 1
+else, output expr2 
+
+function isUserValid(bool) {
+    return bool;
+}
+
+var answer = isUserValid(true) ? "you may enter" : "Access Denied"
+
+5. Switch
+
+funtion moveCommand(direction) {
+    var whatHappens;
+    switch (direction) {
+        case "forward":
+            whatHappens = "you encounter a monster";
+            break;
+        case "back":
+            whatHappens = "you arrived home";
+            break;
+        default"
+            whatHappens = "please enter a valid direction";
+    }
+    return whatHappens;
+}
+
+-------------------------
+Functions
+alert() - pops out for output
+prompt() - pops out for input
+
+arguments -actual function input
+parameters - function input in declaring functions
+
+function declaration
+function name () {}
+funtion sayHello () {
+    console.log("Hello");
+}
+
+Function expression
+var a = function name() {};
+
+var sayBye = function () {
+    conole.log("Bye");
+    // also an anonymous function
+}
+
+
+function multiple(1,b) {
+    return a*b; -> outputs then exit, doesn not execute lines after
+}
+
+-----------
+Arrow functions
+function add(a,b) {
+    return a+b;
+}
+OR
+const add2 = (a,b) => a +b;
+OR
+const add3 = (a,b) => {
+    a +b;
+}
+-------------------
+Data Structures
+1. Array
+var list = ["tiger", "cat", "bear", "bird"];
+console.log(list[1]) > "cat"
+list - views entries
+
+performance issue - array with differetn data types
+
+*matrix"-ish
+var list = [["tiger", "cat", bear", "bird"]]
+console.log(list[0][2]); -> bear 
+
+
+list.shift() - removes and displays list[0], length = length-1
+list.pop() - removes and displays list[length], length = length-1 - modifies
+list.push("entry") - adds "entry" to list[length], length = length+1 - modifies
+list.concat(["e1", "e2"]) - concat matrix, adds at end - creates new list
+list.sort(); - sotrs alphabetically
+
+2. Objects
+var user = {
+    thisIsAMethod: something,
+    name: "John:",
+    age: 34,
+    hobby: "Soccer",
+    isMarried: false,
+    property: "value",
+}
+
+user.name -> "John"
+user.favoriteFood = "spinach" -> adds to Object
+user.isMarried = true -> can override
+method - function inside an object
+
+ES6
+object properties 
+
+dyanmic object properties
+const name = 'john snow';
+
+cosnt obj = {
+    [name]: 'hello',
+    ['ray' + 'smith']: 'hihi' 
+}
+
+
+
+const a = 'simon';
+const b = true;
+const c = {};
+
+const obj = {
+    a: a,
+    b: b,
+    c: c
+}
+OR
+const obj = {
+    a,
+    b,
+    c
+}
+
+----------------------------
+template strings
+
+const name = Sally;
+const age = "34";
+const pet = "horse"
+const = "Hello " + name : "you are//"
+OR
+const greetingBest = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have';
+
+---------------------------
+default arguments (if no given arguments)
+function greet(name='', age=30, pet='cat'){
+    return `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have;
+}
+
+-------------------------
+Loops
+1. for
+for (var i=0; i<todos.length; i++) {}
+
+2. while
+var counterOne = 0;
+while (counterOne<10) {
+    console.log(counterOne);
+    counterOne++
+}
+
+3. do-while
+counterTwo = 10
+do {
+    console.log(counterTwo);
+    counter--;
+} while(counterTwo>0)
+
+
+
+4. forEach (ECMAScript)
+
+todos.forEach(funtion(object, index) {
+    console.log(object, index);
+})
+
+or
+Todos (todo,i) {
+    console.log(todo,i);
+}
+
+todos.foreach(logTodos);
+

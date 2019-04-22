@@ -1,0 +1,26 @@
+/* Cascading Style Sheets
+Selector {
+    Property: value;
+} */
+
+h2 {
+    color: blue;
+}
+p{
+    font-size: 20px;
+    color:pink;
+}
+
+.boxmodel {
+    border: 5px solid red;
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    /* top right bottom left; top &bottom, left & right*/
+    margin: 0px 20px 0px 20px;
+    width: 33px;
+    height: 55px;
+}
+
+span {
+    font-size: 5em;
+}

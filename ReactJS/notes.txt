@@ -1,0 +1,221 @@
+sudo npm install -f create-react-app
+create-react-app "filename"
+
+npm run
+npm start - run site locally
+npm build - creates build folder with optimized files used to deply a website 
+
+cloned repo
+npm install
+npm start 
+----
+
+folders
+> public
+>> fav.ico - webpage icon
+>> manifest.json - when webpages isaved to desktop?
+
+>src (source)
+>> index.js - main script files
+
+---
+
+import
+React - view library
+ReactDOM - DOM websites
+ReactNative - mobile
+
+---
+HTML class now becomes className
+
+----
+import React, { Component } from 'react';
+import './Hello.css';
+
+class Hello extends Component {
+    render() {
+        return (
+            < div className='f1'>
+                <h1>Hello World</h1>
+                <p>{this.props.greeting}</p>
+            </div >
+        );
+    }
+}
+
+// same as this
+// const Hello = (props) => {
+//     return (
+//         < div className='f1'>
+//             <h1>Hello World</h1>
+//             <p>{props.greeting}</p>
+//         </div >
+//     );
+// }
+
+export default Hello;
+
+
+----
+use ternary instead of if-else
+
+if x {
+    do y
+} else {
+    do z
+}
+
+return x ?
+    do y :
+    do z
+
+---
+props - properties
+- does not change
+- inputs that we get 
+- never modify
+- things that come out of state 
+
+-- 
+state
+- object that describes your app
+- able to change 
+- usually live in the parent component 
+
+--
+parent feeds state into a child component as a property 
+
+--
+children
+- every props property has children
+- prlly any component wrapped by the parent component (ie Scroll.js)
+
+const Scroll = (props) => {
+    return props.children
+};
+-renders same
+
+--
+FOLDER ORGANIZATION
+
+1. components
+- const function
+2. containers
+- smart components
+- has states that modify, life cycle hooks
+- class syntax
+- not pure function
+- pass state to components
+
+
+-- 
+error boundaries
+- wrps component with error boundary component
+- catches error in the wrapped component 
+- useful in production mode
+
+--------------------
+STATE MANAGEMENT
+REDUX library
+- good for managing large state
+-- react is good fpor views, but not in management
+- useful for sharing data between containers
+- predictable state management using 3 principles
+
+Redux Principles
+1. Single source of truth
+- one state table
+2. State is read only
+- state object will not be modified
+- create a new objec t that has prev state with modification
+3. Changes using pure functions 
+- something that receives an input and returns a predictable output and does not modify anything
+
+Vocabulary
+1. Action 
+- something a user does
+- goes to a reducer
+2. Reducer 
+- pure function
+3. Store
+- state of the app
+- output of reducer 
+4. Make changes to view 
+
+all actions goes to one reducers and returns a state and updates the store then make changes
+
+Flux Pattern - redux architecture
+action - dispatcher - store - view
+- one way data flow 
+
+MVC - model-view- controller
+action - controller - models (multiple) - view (may trigger a lot of changes)
+
+- redux does not completely replace this.state in react. can be used together 
+
+---
+installing redux 
+npm install redux 
+npm install react-redux 
+
+containers will communicate to store
+DOM/presentational components 
+
+create:
+1. Action
+
+export const setSearchField = (text) => ({ 
+    type: CHANGE_SEARCH_FIELD,
+    payload: text 
+})
+
+setSearchField - function action name 
+(text) - input 
+returns object that has: 
+type - constant-variable, ALL CAPS, action name (import from constants.js) [if string, if mistyped, it will not catch the variable]
+payload - data to be sent to reducer  
+
+1.5. Constants
+- list of what your actions architecture
+
+export const CHANGE_SEARCH_FIELD = 'CHANGE_SEARCH_FIELD';
+
+
+2. Reducer
+pure function
+
+export const searchRobots = (state = initialState, action = {}) => {
+    switch (action.type) {
+        case: CHANGE_SEARCH_FIELD:
+            return Object.assign({}, state, { searchField: action.payload });
+        default:
+            return state;
+    }
+} 
+
+// using destructuing or object spread operator
+export const searchRobots = (state = initialState, action = {}) => {
+    switch (action.type) {
+        case: CHANGE_SEARCH_FIELD:
+            return { ...state, searchField: action.payload}
+        default:
+            return state;
+    }
+} 
+
+function name = action name 
+get inputs: state = state of application, action: action that happened [do not leave empty]
+input if they care, act upon the state 
+returns a new state {state: initialState, seachField: action.payload}
+
+Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.
+Object.assign(target, ...sources)
+
+why switch? 
+can have multiple cases 
+
+3. Store
+
+in index.js
+import {Provider, connect} fron 'react-redux';
+import {createStore} from 'redux';

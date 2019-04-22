@@ -1,0 +1,80 @@
+/* Cascading Style Sheets
+Selector {
+    Property: value;
+} */
+/* 
+css-tricks
+paletton.com */
+
+/* element */
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;    
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* element, element */
+/* h2 {
+    color: red;
+    text-align: center;
+    border: 5px dashed rgba(49, 165, 185, 0.5);
+    cursor: pointer;
+} */
+
+/* element, element */
+h2, p {
+    color: red;
+    text-align: center;
+    border: 5px dashed rgba(49, 165, 185, 0.5);
+    cursor: pointer;
+}
+
+img {
+    float: left;
+}
+
+footer {
+    clear:both;
+    text-align: center;
+}
+
+p {
+    color: green;
+    text-decoration: line-through;
+    text-transform: lowercase;
+    line-height: 20px;
+    /* font-style: italic; */
+    font-weight: 900; 
+    font-size: 150%;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; (first font, backup font if 1st font dont exist iin computer) */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* class */
+.webtext {
+    color:pink; 
+    border: 5px solid rgba(194, 52, 199, 0.5);
+}
+
+.active {
+    color: red;
+}
+
+/* id */
+#div1 {
+    background: rgba(0, 0, 185, 0.2)
+}
+
+#div2 {
+    background: rgba(0, 185, 0, 0.2)
+}
+
+
+/* star , symbolizes all elements */
+/* *{
+    text-align: right;
+} */

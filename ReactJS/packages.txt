@@ -1,0 +1,12 @@
+Popup alerts
+Sweetalerts 2
+- https://sweetalert2.github.io/
+- https://www.npmjs.com/package/sweetalert2
+
+Promise API handling
+axios
+- https://www.npmjs.com/package/axios
+
+QR code
+qrcode.react
+- https://www.npmjs.com/package/qrcode.react

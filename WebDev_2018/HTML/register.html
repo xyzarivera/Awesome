@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <form method= "GET">
+        First Name: <input type="text" name="firstname" required><br> <!-- form field required-->
+        Last Name: <input type="text"name="lastname"><br>
+        Email: <input type="email" name="email"><br> <!--appropriate email field -->
+        Password: <input type="password" name="password" minlength="5"><br> <!-- minimum length required-->
+        Birthday: <input type="date" name="birthday"><br>
+        Gender: <br>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="other">Other<br>
+        Pets: <br>
+        <input type="checkbox" name="cat">Cat<br>
+        <input type="checkbox" name="dog">Dog<br>
+        Cars: <br> <!-- dropdown -->
+        <select name="cars">
+            <option value="volvo" name="volvo">Volvo</option>
+            <option value="audi" name="audi">Audi</option>
+        </select><br>
+        <!-- multiple attribute-->
+        <!-- <select multiple>
+            <option value="volvo">Volvo</option>
+            <option value="audi">Audi</option>
+        </select><br> -->
+        <input type="submit">
+        <input type="submit" value="Register">
+        <input type="reset">
+        
+    </form>
+    <hr>
+    <a href="index.html">Go back</a>
+</body>
+</html>
+
+<!-- 
+    file:///C:/Users/DELL/Desktop/WebDev%202018/4/register.html?firstname=fake&lastname=man&email=fake%40man.com&password=12345&birthday=1111-11-11&gender=male&cat=on&cars=volvo
+
+?firstname=fake
+&lastname=man
+&email=fake%40man.com
+&password=12345
+&birthday=1111-11-11
+&gender=male
+&cat=on
+&cars=volvo
+
+QUERY STRINGS - automatically generated in HTML5 form, 
+form uses attribute GET by default (atach form info to url)
+POST - no query but attached to body of request - use this instead
+action,php - php based website
+
+<div> - block elemet
+<span> - inline element, specific line
+-->
