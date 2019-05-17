@@ -17,6 +17,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-wi
 
 ## running local rails server
 ```
+> bundle install
+> rails db:migrate db:seed
 > rails server
 or 
 > rails s
