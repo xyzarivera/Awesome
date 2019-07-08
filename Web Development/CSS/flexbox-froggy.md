@@ -1,5 +1,7 @@
 https://flexboxfroggy.com/
 ---
+display: flex
+---
 justify-content property
 aligns items horizontally
 
