@@ -26,3 +26,6 @@ VAlence - correctedness
 Insight - > Data Product
 
 Bigdata > Analysis + Questions => Insight
+
+Slides:
+https://www.slideshare.net/BernardMarr/big-data-25-facts/4-It_is_expectedthat_by_2020
