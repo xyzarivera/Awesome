@@ -1,14 +1,17 @@
-# Awesome
-
-This is `Xyza's Cheat Sheet`. Inspired by the [Proudcloud Awesome](https://github.com/proudcloud/awesome) repository where they document their best practices.
-This is where she will document her learnings from different fields. 
+# Awesome Cheat Sheet
 
 She had troubled keeping notes in different applications and probably on how she can share them also. So, she decided to create this repository, open for everyone to check.
 
 > This repository is always a work in progress.
-> last update: July 10, 2019
+> last update: July 19, 2019
 
 ## Updates
+
+### 20190719
+
+- added old notes on Docker in Back End Development folder
+- reorganized CSS folder to Front End Development folder
+- renamed Web Development to Web Frameworks
 
 ### 20190610
 
