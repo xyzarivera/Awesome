@@ -6,7 +6,8 @@ This is based on our AI focused group discussion by @johnanthonyjose
 Deep Learning Crash Course
 https://github.com/johnanthonyjose/deeplearning-crash-course
 
-Convolutional Neural Networks for Visuak REcognition
+Convolutional Neural Networks for Visual Recognition
+https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC
 https://cs231n.github.io/
 
 ## Topics
@@ -56,3 +57,11 @@ https://github.com/reiinakano/gan-playground
 ### CVPR (Google)
 
 [Accuracy Trade-offs for Modern Convolutional Object Detectors.pdf]
+
+### RNN, LSTM, GRU
+
+RNN = Recurrent Neural network. This kind of neural network is for recurring — so may parang pagka-cyclic siya — data, e.g. tidal data or stock prices. Popular for time series.
+
+LSTM = specific part of RNN; so it's like a different kind of neuron. "If you consider the LSTM cell as a black box, it can be used very much like a basic cell, except it will perform much better; training will converge faster and it will detect long-term dependencies in the data. "
+
+GRU = "simplified version of LSTM cell that seems to work better"
